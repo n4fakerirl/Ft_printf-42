@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 18:03:14 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/11 20:35:07 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/05/11 20:55:38 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
-/*int	main(void)
+int	main(void)
 {
 	int		a;
 	char	str[] = "test";
@@ -62,8 +62,8 @@ int	ft_printf(const char *format, ...)
 	int		count2;
 
 	a = 21;
-	count = ft_printf("%p\n", &a);
-	count2 = printf("%p\n", &a);
+	count = ft_printf("%%c");
+	count2 = printf("%%c");
 	ft_printf("%d\n", count);
 	printf("%d\n", count2);
-}*/
+}
