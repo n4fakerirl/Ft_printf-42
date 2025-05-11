@@ -6,14 +6,14 @@
 #    By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/11 14:23:51 by ocviller          #+#    #+#              #
-#    Updated: 2025/05/11 17:52:52 by ocviller         ###   ########.fr        #
+#    Updated: 2025/05/11 19:44:25 by ocviller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 
 SRC = ft_printf.c ft_printchar.c ft_printnb.c ft_printstr.c ft_printhex.c \
-	ft_printuns.c
+	ft_printuns.c ft_printmem.c
 
 OBJ = $(SRC:.c=.o)
 

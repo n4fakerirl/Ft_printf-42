@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 17:52:38 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/11 18:20:26 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/05/11 20:16:19 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ int	ft_printuns(unsigned int nb);
 int	ft_printhex(unsigned int nb);
 int	ft_printhex_up(unsigned int nb);
 int	ft_putnbr_base(unsigned int nb, char *base);
+int ft_printmem(void *ptr);
+int	ft_print_pointer(void *ptr);
 
 #endif

@@ -1,0 +1,26 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     a.out
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _ft_printf, symObjAddr: 0x0, symBinAddr: 0x100003378, symSize: 0x320 }
+  - { offset: 0x41, size: 0x8, addend: 0x0, symName: _ft_printf, symObjAddr: 0x0, symBinAddr: 0x100003378, symSize: 0x320 }
+  - { offset: 0x94, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x320, symBinAddr: 0x100003698, symSize: 0xB4 }
+  - { offset: 0x16A, size: 0x8, addend: 0x0, symName: _ft_printchar, symObjAddr: 0x0, symBinAddr: 0x10000374C, symSize: 0x34 }
+  - { offset: 0x177, size: 0x8, addend: 0x0, symName: _ft_printchar, symObjAddr: 0x0, symBinAddr: 0x10000374C, symSize: 0x34 }
+  - { offset: 0x1D3, size: 0x8, addend: 0x0, symName: _ft_printnb, symObjAddr: 0x0, symBinAddr: 0x100003780, symSize: 0x38 }
+  - { offset: 0x1E0, size: 0x8, addend: 0x0, symName: _ft_printnb, symObjAddr: 0x0, symBinAddr: 0x100003780, symSize: 0x38 }
+  - { offset: 0x216, size: 0x8, addend: 0x0, symName: _ft_count, symObjAddr: 0x38, symBinAddr: 0x1000037B8, symSize: 0xB0 }
+  - { offset: 0x280, size: 0x8, addend: 0x0, symName: _ft_printstr, symObjAddr: 0x0, symBinAddr: 0x100003868, symSize: 0x80 }
+  - { offset: 0x29B, size: 0x8, addend: 0x0, symName: _ft_printstr, symObjAddr: 0x0, symBinAddr: 0x100003868, symSize: 0x80 }
+  - { offset: 0x303, size: 0x8, addend: 0x0, symName: _ft_putnbr_uns, symObjAddr: 0x0, symBinAddr: 0x1000038E8, symSize: 0x70 }
+  - { offset: 0x310, size: 0x8, addend: 0x0, symName: _ft_putnbr_uns, symObjAddr: 0x0, symBinAddr: 0x1000038E8, symSize: 0x70 }
+  - { offset: 0x342, size: 0x8, addend: 0x0, symName: _ft_printuns, symObjAddr: 0x70, symBinAddr: 0x100003958, symSize: 0x34 }
+  - { offset: 0x378, size: 0x8, addend: 0x0, symName: _ft_count_unsigned, symObjAddr: 0xA4, symBinAddr: 0x10000398C, symSize: 0x7C }
+  - { offset: 0x3E9, size: 0x8, addend: 0x0, symName: _ft_putnbr_base, symObjAddr: 0x0, symBinAddr: 0x100003A08, symSize: 0x128 }
+  - { offset: 0x404, size: 0x8, addend: 0x0, symName: _ft_putnbr_base, symObjAddr: 0x0, symBinAddr: 0x100003A08, symSize: 0x128 }
+  - { offset: 0x464, size: 0x8, addend: 0x0, symName: _ft_printhex, symObjAddr: 0x128, symBinAddr: 0x100003B30, symSize: 0x34 }
+  - { offset: 0x49A, size: 0x8, addend: 0x0, symName: _ft_printhex_up, symObjAddr: 0x15C, symBinAddr: 0x100003B64, symSize: 0x34 }
+  - { offset: 0x510, size: 0x8, addend: 0x0, symName: _ft_printmem, symObjAddr: 0x0, symBinAddr: 0x100003B98, symSize: 0x58 }
+  - { offset: 0x53D, size: 0x8, addend: 0x0, symName: _ft_printmem, symObjAddr: 0x0, symBinAddr: 0x100003B98, symSize: 0x58 }
+  - { offset: 0x581, size: 0x8, addend: 0x0, symName: _ft_putptr, symObjAddr: 0x58, symBinAddr: 0x100003BF0, symSize: 0x154 }
+...

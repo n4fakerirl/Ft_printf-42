@@ -1,43 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printnb.c                                       :+:      :+:    :+:   */
+/*   ft_printmem.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/10 20:28:14 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/11 19:41:59 by ocviller         ###   ########.fr       */
+/*   Created: 2025/05/11 19:36:55 by ocviller          #+#    #+#             */
+/*   Updated: 2025/05/11 20:21:04 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_printf.h"
+#include <stdint.h>
+#include <stdio.h>
 
-static int	ft_count(long long nbr)
+#include <unistd.h>
+#include <stdint.h>
+
+static int	ft_putptr(uintptr_t addr)
 {
-	int	count;
+	char	*base = "0123456789abcdef";
+	char	buffer[16];
+	int		i = 0;
+	int		count = 0;
 
-	count = 0;
-	if (nbr == 0)
-		return (1);
-	if (nbr < 0)
+	if (addr == 0)
+		return (write(1, "0", 1));
+
+	while (addr > 0)
 	{
-		count++;
-		nbr *= -1;
+		buffer[i++] = base[addr % 16];
+		addr /= 16;
 	}
-	while (nbr > 0)
-	{
-		nbr = nbr / 10;
-		count++;
-	}
+	while (i--)
+		count += ft_printchar(buffer[i]);
 	return (count);
 }
 
-int	ft_printnb(int nb)
+int	ft_printmem(void *ptr)
 {
-	int	count;
+	int			count;
+	uintptr_t	addr;
 
-	count = ft_count(nb);
-	ft_putnbr_fd(nb, 1);
+	addr = (uintptr_t)ptr;
+	count = write(1, "0x", 2);
+	count += ft_putptr(addr);
 	return (count);
 }
