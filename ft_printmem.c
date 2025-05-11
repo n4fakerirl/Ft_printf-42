@@ -6,28 +6,25 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 19:36:55 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/11 20:21:04 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/05/11 20:36:54 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "ft_printf.h"
-#include <stdint.h>
-#include <stdio.h>
-
-#include <unistd.h>
-#include <stdint.h>
+#include "libft.h"
 
 static int	ft_putptr(uintptr_t addr)
 {
-	char	*base = "0123456789abcdef";
+	char	*base;
 	char	buffer[16];
-	int		i = 0;
-	int		count = 0;
+	int		i;
+	int		count;
 
+	base = "0123456789abcdef";
+	i = 0;
+	count = 0;
 	if (addr == 0)
 		return (write(1, "0", 1));
-
 	while (addr > 0)
 	{
 		buffer[i++] = base[addr % 16];
