@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 19:36:55 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/11 20:36:54 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/05/12 14:17:39 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,11 @@ int	ft_printmem(void *ptr)
 	uintptr_t	addr;
 
 	addr = (uintptr_t)ptr;
+	if (ptr == 0)
+	{
+		count = write(1, "(nil)", 5);
+		return (count);
+	}
 	count = write(1, "0x", 2);
 	count += ft_putptr(addr);
 	return (count);
