@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 18:03:14 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/12 16:16:42 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/05/15 16:40:18 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int	ft_printf(const char *format, ...)
 
 	i = 0;
 	count = 0;
+	if (!format)
+		return (-1);
 	va_start(args, format);
 	while (format[i] != '\0')
 	{
@@ -60,18 +62,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-
-/*int	main(void)
-{
-	int		a;
-	char	*str = NULL;
-	int		count;
-	int		count2;
-
-	a = 21;
-	count = ft_printf("ma fonction : %%% . euuuh");
-	//printf("\n");
-	count2 = printf(" vrai printf : %%% . euuuh");
-	//ft_printf("%d\n", count);
-	//printf("%d\n", count2);
-}*/

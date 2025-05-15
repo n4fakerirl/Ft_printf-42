@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 22:04:02 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/11 17:46:54 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/05/14 17:05:35 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,12 @@ int	ft_putnbr_base(unsigned int nb, char *base)
 
 	nbr = nb;
 	count = 0;
-	if (nbr >= ft_strlen(base))
+	if (nbr >= 16)
 	{
-		count += ft_putnbr_base(nbr / ft_strlen(base), base);
-		count += ft_putnbr_base(nbr % ft_strlen(base), base);
+		count += ft_putnbr_base(nbr / 16, base);
+		count += ft_putnbr_base(nbr % 16, base);
 	}
-	if (nbr >= 0 && nbr < ft_strlen(base))
+	if (nbr < 16)
 	{
 		count++;
 		result = base[nbr];
