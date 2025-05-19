@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 18:03:14 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/15 16:40:18 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/05/19 15:04:24 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,26 @@
 
 int	ft_format(const char c, va_list args)
 {
+	int	count;
+
+	count = 0;
 	if (c == 'd' || c == 'i')
-		return (ft_printnb(va_arg(args, int)));
+		count += ft_printnb(va_arg(args, int));
 	else if (c == 'u')
-		return (ft_printuns(va_arg(args, unsigned int)));
+		count += ft_printuns(va_arg(args, unsigned int));
 	else if (c == 'x')
-		return (ft_printhex(va_arg(args, unsigned int)));
+		count += ft_printhex(va_arg(args, unsigned int));
 	else if (c == 'X')
-		return (ft_printhex_up(va_arg(args, unsigned int)));
+		count += ft_printhex_up(va_arg(args, unsigned int));
 	else if (c == 's')
-		return (ft_printstr(va_arg(args, char *)));
+		count += ft_printstr(va_arg(args, char *));
 	else if (c == 'c')
-		return (ft_printchar(va_arg(args, int)));
+		count += ft_printchar(va_arg(args, int));
 	else if (c == '%')
-		return (ft_printchar('%'));
+		count += ft_printchar('%');
 	else if (c == 'p')
-		return (ft_printmem(va_arg(args, char *)));
-	else
-		return (-1);
+		count += ft_printmem(va_arg(args, char *));
+	return (count);
 }
 
 int	ft_printf(const char *format, ...)
