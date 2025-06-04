@@ -6,13 +6,13 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 22:04:02 by ocviller          #+#    #+#             */
-/*   Updated: 2025/06/04 10:23:15 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/06/04 15:39:11 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr_base(unsigned int nb, char *base)
+int	ft_putnbr_base(unsigned long int nb, char *base)
 {
 	unsigned long long	nbr;
 	char				result;

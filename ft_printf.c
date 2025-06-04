@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 18:03:14 by ocviller          #+#    #+#             */
-/*   Updated: 2025/06/04 10:23:06 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/06/04 15:42:35 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_format(const char c, va_list args)
 	else if (c == '%')
 		count += ft_printchar('%');
 	else if (c == 'p')
-		count += ft_printmem(va_arg(args, char *));
+		count += ft_printmem(va_arg(args, void *));
 	return (count);
 }
 
