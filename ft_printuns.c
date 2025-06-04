@@ -6,11 +6,10 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 21:09:01 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/11 17:49:22 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/06/04 10:23:37 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "ft_printf.h"
 
 static int	ft_count_unsigned(unsigned int nbr)

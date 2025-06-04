@@ -6,14 +6,11 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 18:03:14 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/19 15:04:24 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/06/04 10:23:06 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
-#include <limits.h>
-#include <stdio.h>
 
 int	ft_format(const char c, va_list args)
 {

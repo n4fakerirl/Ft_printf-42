@@ -6,7 +6,7 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 20:33:23 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/11 20:39:55 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/06/04 10:23:58 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <stdint.h>
+# include "libft/libft.h"
 
 int	ft_printf(const char *format, ...);
 int	ft_printchar(char c);

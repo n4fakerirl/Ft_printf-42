@@ -6,12 +6,11 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/11 19:36:55 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/12 14:17:39 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/06/04 10:23:29 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 static int	ft_putptr(uintptr_t addr)
 {

@@ -6,11 +6,10 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 20:28:14 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/11 19:41:59 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/06/04 10:23:32 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include "ft_printf.h"
 
 static int	ft_count(long long nbr)

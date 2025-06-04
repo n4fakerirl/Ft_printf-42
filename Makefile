@@ -5,45 +5,33 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/05/11 14:23:51 by ocviller          #+#    #+#              #
-#    Updated: 2025/05/22 15:52:47 by ocviller         ###   ########.fr        #
+#    Created: 2025/05/22 16:19:52 by ocviller          #+#    #+#              #
+#    Updated: 2025/06/04 12:36:03 by ocviller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-
-SRC = ft_printf.c ft_printchar.c ft_printnb.c ft_printstr.c ft_printhex.c \
-    ft_printuns.c ft_printmem.c
-
-OBJ = $(SRC:.c=.o)
-
-LIBFT_DIR = ./libft
-LIBFT = $(LIBFT_DIR)/libft.a
-
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
-RM = rm -f
+CFLAGS = -Wall -Wextra -Werror -I.
 
-all: $(LIBFT) $(NAME)
+SRCS = ft_printf.c ft_printhex.c ft_printmem.c ft_printchar.c \
+		ft_printnb.c ft_printstr.c ft_printuns.c
 
-$(LIBFT):
-	@$(MAKE) -C $(LIBFT_DIR)
-	@$(MAKE) bonus -C $(LIBFT_DIR)
+OBJS = $(SRCS:.c=.o)
 
-$(NAME): $(OBJ) $(LIBFT)
-	@ar rcs $(NAME) $(OBJ) $(LIBFT)
-	@echo "$(NAME) created with libft !"
+all: $(NAME)
 
-%.o: %.c
-	@$(CC) $(CFLAGS) -I$(LIBFT_DIR) -c $< -o $@
+$(NAME): $(OBJS)
+	make -C libft
+	ar rcs $(NAME) $(OBJS) libft/*.o
 
 clean:
-	@$(RM) $(OBJ)
-	@$(MAKE) -C $(LIBFT_DIR) clean
+	rm -f $(OBJS)
+	make clean -C libft
 
 fclean: clean
-	@$(RM) $(NAME)
-	@$(MAKE) -C $(LIBFT_DIR) fclean
+	rm -f $(NAME)
+	make fclean -C libft
 
 re: fclean all
 

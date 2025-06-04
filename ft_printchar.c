@@ -6,12 +6,11 @@
 /*   By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/10 19:59:17 by ocviller          #+#    #+#             */
-/*   Updated: 2025/05/11 17:45:55 by ocviller         ###   ########.fr       */
+/*   Updated: 2025/06/04 10:23:08 by ocviller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 int	ft_printchar(char c)
 {
