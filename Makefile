@@ -6,7 +6,7 @@
 #    By: ocviller <ocviller@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/22 16:19:52 by ocviller          #+#    #+#              #
-#    Updated: 2025/06/04 12:36:03 by ocviller         ###   ########.fr        #
+#    Updated: 2025/06/05 12:17:59 by ocviller         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,16 +22,16 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	make -C libft
-	ar rcs $(NAME) $(OBJS) libft/*.o
+	@make -C libft
+	@ar rcs $(NAME) $(OBJS) libft/*.o
 
 clean:
-	rm -f $(OBJS)
-	make clean -C libft
+	@rm -f $(OBJS)
+	@make clean -C libft
 
 fclean: clean
-	rm -f $(NAME)
-	make fclean -C libft
+	@rm -f $(NAME)
+	@make fclean -C libft
 
 re: fclean all
 
