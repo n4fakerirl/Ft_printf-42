@@ -55,6 +55,7 @@ Cette fonction prend une chaîne de format ainsi qu’un nombre variable d’arg
 <p align="center">
   <img width="199" height="169" alt="image" src="https://github.com/user-attachments/assets/3cb12a00-dc57-4f96-a6b9-66bbfe7cd7b8" />
 </p>
+
 ---
 
 ## 🫐 Auteur
